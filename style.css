@@ -61,7 +61,7 @@ body.show {
 
 .topVidBg {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -95,8 +95,8 @@ body.show {
 }
 
 .titleBox.show {
-    bottom: 20px;
-    right: 20px;
+    bottom: 150px;
+    right: 150px;
     transform: none;
 }
 
@@ -112,7 +112,7 @@ body.show {
 }
 
 .topTitle.show {
-    font-size: 3em;
+    font-size: 4em;
 }
 
 .topSubTitle {
@@ -127,10 +127,21 @@ body.show {
 }
 
 .topSubTitle.show {
-    font-size: 2em;
+    font-size: 2.8em;
+}
+
+
+@media screen and (max-width: 1520px) {
+    .titleBox {
+        width: 760px;
+    }
 }
 
 @media screen and (max-width: 890px) {
+    .titleBox {
+        width: 520px;
+    }
+
     .topTitle {
         font-size: 4em;
     }
@@ -138,22 +149,228 @@ body.show {
     .topSubTitle {
         font-size: 2em;
     }
+
+    .titleBox.show {
+        bottom: 20px;
+        right: 20px;
+        transform: none;
+    }
+
+    .topTitle.show {
+        font-size: 3em;
+    }
+
+    .topSubTitle.show {
+        font-size: 2em;
+    }
 }
 
 @media screen and (max-width: 580px) {
+    .titleBox {
+        width: 330px;
+    }
+
     .topTitle {
-        font-size: 3em;
+        font-size: 2.6em;
     }
     
     .topSubTitle {
         font-size: 1.5em;
     }
+
+    .topTitle.show {
+        font-size: 2em;
+    }
+
+    .topSubTitle.show {
+        font-size: 1.2em;
+    }
 }
 
-@media screen and (max-width: 440px) {
-    .titleBox {
-        width: 221px;
-    }
+.gallerySec {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.galleryTxtBox {
+    padding-top: 150px;
+    padding-bottom: 20px;
+    text-align: right;
+}
+
+.galleryTitle {
+    color: #000000d9;
+    font-size: 3.5em;
+    font-weight: 700;
+    margin: 0;
+    transition: 1.2s ease-in-out;
+    font-family: "he";
+    margin-bottom: 40px;
+}
+
+.galleryTxt {
+    color: #000000d9;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0;
+    transition: 1.2s ease-in-out;
+    font-family: "he";
+    margin-bottom: 40px;
+}
+
+.galleryBox {
+    width: 90%;
+    padding-bottom: 100px;
+}
+
+.gallery-container {
+  text-align: center;
+}
+
+.myImg {
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.75);
+  transition: 0.2s;
+  border: 0px solid transparent;
+}
+
+.myImg:hover {
+  transform: scale(0.95);
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(1, 1) skewX(0deg);
+    opacity: 1;
+  }
+
+  5% {
+    transform: scale(1.5, .1) skewX(10deg);
+    opacity: .5;
+  }
+
+  10%,
+  35% {
+    transform: scale(1, 1) skewX(0deg);
+    opacity: 1;
+  }
+
+  40% {
+    transform: scale(1.5, .1) skewX(10deg);
+    opacity: .25;
+  }
+
+  45%,
+  100% {
+    transform: scale(1, 1) skewX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes offset {
+  50% {
+    outline-offset: .15em;
+    outline-color: var(--col1);
+  }
+
+  55% {
+    outline-offset: .1em;
+    transform: translateY(1px);
+  }
+
+  80%,
+  100% {
+    outline-offset: 0;
+  }
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    /*background-color: rgb(0,0,0);  Fallback color */
+    background-color: rgba(0,0,0,0.95); /* Black w/ opacity */
+    z-index: 1000;
+    opacity: 0;
+    transition: 0.2s;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modalBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    z-index: 4;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 5px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  font-family: "he";
+  font-size: 2em;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  z-index: 5;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    top: 50%;
+  }
 }
 
 .aboutSec {
@@ -164,7 +381,8 @@ body.show {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    padding-block: 150px;
+    padding-top: 50px;
+    padding-bottom: 100px;
     gap: 30px;
     background-color: #fff;
 }
@@ -176,17 +394,17 @@ body.show {
 
 .aboutTitle {
     color: #0f0f0f;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 700;
     margin: 0;
     transition: 1.2s ease-in-out;
     font-family: "he";
     margin-top: -30px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .aboutTxt {
-    color: #0f0f0f;
+    color: #00000096; /*0f0f0f*/
     font-size: 1.4em;
     font-weight: 500;
     margin: 0;
@@ -204,11 +422,25 @@ body.show {
     position: relative;
     width: 500px;
     height: 375px;
+    border-radius: 10px;
+}
+
+.imgs-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 10px 2px #00000068;
+    border-radius: inherit; /* Ensures the shadow corners match the image/container */
+    pointer-events: none; /* Allows interaction with the image underneath */
 }
 
 .mySlides {
     position: absolute;
     width: 100%;
+    height: 100%;
     opacity: 0;
     transition: opacity 0.6s ease-in-out;
 }
@@ -218,10 +450,11 @@ body.show {
 }
 
 .mySlides img {
+    position: relative;
     width: 500px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 2px #0000005c;
+    /* box-shadow: 0px 0px 10px 2px #0000005c; */
 }
 
 .dots-container {
@@ -250,7 +483,10 @@ body.show {
     .aboutSec {
         flex-direction: column;
         gap: 0px;
-        padding-bottom: 0px;
+    }
+
+    .aboutTitle {
+        font-size: 3em;
     }
     
     .imgs-container {
@@ -271,14 +507,21 @@ body.show {
     }
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 420px) {
     .imgs-container {
-        width: 320px;
-        height: 240px;
+        width: 360px;
+        height: 270px;
     }
 
     .aboutTextBox {
         max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .imgs-container {
+        width: 320px;
+        height: 240px;
     }
 }
 
@@ -290,7 +533,8 @@ body.show {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    padding-block: 100px;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
 .zoneTxtBox {
@@ -305,24 +549,27 @@ body.show {
 .zoneTxtRow {
     width: 50%;
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .zoneTitle {
     color: #000000a6;
-    font-size: 28px;
+    font-size: 2em;
     margin-bottom: 10px;
     font-family: "he";
 }
 
 .zoneSubTitle {
     color: #000000d9;
-    font-size: 40px;
+    font-size: 3em;
     font-family: "he";
 }
 
 .zoneTxtInfo {
-    color: #00000086;
-    font-size: 24px;
+    color: #00000096;
+    font-size: 1.5em;
     width: 100%;
     font-family: "he";
 }
@@ -340,7 +587,7 @@ body.show {
     pointer-events: none;
 }
 
-@media screen and (max-width: 1290px) {
+@media screen and (max-width: 1618px) { /*1290px*/
     .zoneTxtBox {
         flex-direction: column;
     }
@@ -351,18 +598,18 @@ body.show {
 
     .zoneTitle {
         color: #000000a6;
-        font-size: 22px;
+        font-size: 1.8em;
         margin-bottom: 10px;
     }
     
     .zoneSubTitle {
         color: #000000d9;
-        font-size: 30px;
+        font-size: 2.6em;
         margin-bottom: 20px;
     }
 
     .zoneTxtInfo {
-        font-size: 16px;
+        font-size: 1.4em;
     }
 }
 
@@ -379,14 +626,41 @@ body.show {
     padding-inline: 20px;
 }
 
+.panoIframeBox {
+    position: relative;
+    border-radius: 10px;
+    padding: 0;
+    width: 80%;
+    height: 750px;
+}
+
+.panoIframeBox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 10px 2px #00000068;
+    border-radius: inherit; /* Ensures the shadow corners match the image/container */
+    pointer-events: none; /* Allows interaction with the image underneath */
+}
+
+.panoIframeBox iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0 none;
+    border-radius: 10px;
+}
+
 .panoTitle {
-    color: #fff;
-    font-size: 4em;
+    color: #000000d9;
+    font-size: 3.5em;
     font-weight: 700;
-    text-transform: uppercase;
     margin: 0;
     transition: 1.2s ease-in-out;
     font-family: "he";
-    text-shadow: 0px 0px 4px #000;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
