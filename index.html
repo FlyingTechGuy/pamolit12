@@ -11,7 +11,7 @@
 </head>
 <body>
     <section class="topSec">
-        <video src="src/pamolit12.mov" class="topVidBg" autoplay muted loop></video>
+        <video src="src/pamolit12.mp4" class="topVidBg" autoplay muted loop></video>
         <div class="blackopacity"></div>
         <div class="titleBox">
             <p class="topTitle">פמולית 12 - שוהם</p>
@@ -44,7 +44,16 @@
             <!-- The Modal -->
             <div id="myModal" class="modal">
                 <span class="close" id="close">&times;</span>
-                <img class="modal-content" id="img01">
+                <span id="imgCounter"></span>
+                <div class="middleBox">
+                    <span onclick="prevImg()" class="deskArrow"><i class="fa-solid fa-angle-left"></i></span>
+                    <img class="modal-content" id="img01">
+                    <span onclick="nextImg()" class="deskArrow"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div class="middleBoxMob">
+                    <i onclick="prevImg()" class="fa-solid fa-angle-left"></i>
+                    <i onclick="nextImg()" class="fa-solid fa-angle-right"></i>
+                </div>
                 <div id="caption"></div>
                 <div class="modalBg" onclick="closeModal()"></div>
             </div>
@@ -56,7 +65,6 @@
             <p class="aboutTxt">בניין בוטיק בן 3 קומות - קומה ראשונה 4 דירות גן, קומה שנייה 2 דירות מיני פנטהאוז וקומה שלישית 2 דירות פנטהאוז. לבניין יש חנייה תת קרקעית ובנוסף חנייה ברחוב כאשר הכניסה לרחוב ניתנת אך ורק למי שגר בו. סביב הבניין יש שביל אשר מקיף את כל השכונה, ולמרות זאת לבניין יש פרטיות מלאה היות והוא פינתי</p>
         </div>
         <div class="slideshow-container">
-            <!-- Slides -->
             <div class="imgs-container">
                 <div class="mySlides fade" id="mySlide1">
                     <img src="src/img1.JPG" style="width:100%">
@@ -65,7 +73,6 @@
                     <img src="src/img2.JPG" style="width:100%">
                 </div>
             </div>
-            <!-- Dots -->
             <div class="dots-container">
                 <span class="dot" id="dot2" onclick="showSlides(2)"></span>
                 <span class="dot" id="dot1" onclick="showSlides(1)"></span>

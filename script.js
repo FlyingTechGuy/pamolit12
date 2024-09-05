@@ -35,6 +35,7 @@ function showSlides(n) {
 
 // Get the modal
 const modal = document.getElementById("myModal");
+let imgCount;
 			
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 const img1 = document.getElementById("myImg1");
@@ -60,6 +61,8 @@ img1.onclick = function(){
   }, 1);
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  imgCount = 1;
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
 img2.onclick = function(){
   modal.style.display = "flex";
@@ -68,6 +71,8 @@ img2.onclick = function(){
   }, 1);
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  imgCount = 2;
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
 img3.onclick = function(){
   modal.style.display = "flex";
@@ -76,6 +81,8 @@ img3.onclick = function(){
   }, 1);
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  imgCount = 3;
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
 img4.onclick = function(){
   modal.style.display = "flex";
@@ -84,6 +91,8 @@ img4.onclick = function(){
   }, 1);
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  imgCount = 4;
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
 img5.onclick = function(){
   modal.style.display = "flex";
@@ -92,6 +101,8 @@ img5.onclick = function(){
   }, 1);
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  imgCount = 5;
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
 img6.onclick = function(){
   modal.style.display = "flex";
@@ -100,6 +111,8 @@ img6.onclick = function(){
   }, 1);
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  imgCount = 6;
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
 img7.onclick = function(){
   modal.style.display = "flex";
@@ -108,6 +121,8 @@ img7.onclick = function(){
   }, 1);
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  imgCount = 7;
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
 img8.onclick = function(){
   modal.style.display = "flex";
@@ -116,6 +131,8 @@ img8.onclick = function(){
   }, 1);
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  imgCount = 8;
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
 img9.onclick = function(){
   modal.style.display = "flex";
@@ -124,6 +141,8 @@ img9.onclick = function(){
   }, 1);
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  imgCount = 9;
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
 img10.onclick = function(){
   modal.style.display = "flex";
@@ -132,6 +151,8 @@ img10.onclick = function(){
   }, 1);
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  imgCount = 10;
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
 img11.onclick = function(){
   modal.style.display = "flex";
@@ -140,6 +161,8 @@ img11.onclick = function(){
   }, 1);
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  imgCount = 11;
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
 img12.onclick = function(){
   modal.style.display = "flex";
@@ -148,6 +171,8 @@ img12.onclick = function(){
   }, 1);
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  imgCount = 12;
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
 img13.onclick = function(){
   modal.style.display = "flex";
@@ -156,6 +181,8 @@ img13.onclick = function(){
   }, 1);
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  imgCount = 13;
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
 img14.onclick = function(){
   modal.style.display = "flex";
@@ -164,13 +191,16 @@ img14.onclick = function(){
   }, 1);
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
+  imgCount = 14;
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
 
 // Get the <span> element that closes the modal
-const span = document.getElementById("close");
+const spanX = document.getElementById("close");
+const imgCounter = document.getElementById("imgCounter");
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+spanX.onclick = function() {
   modal.classList.remove('show');
   setTimeout(function() {
     modal.style.display = "none";
@@ -183,4 +213,137 @@ function closeModal() {
   setTimeout(function() {
     modal.style.display = "none";
   }, 200);
+}
+
+
+function nextImg() {
+  switch (imgCount) {
+    case 14:
+      modalImg.src = img1.src;
+      captionText.innerHTML = img1.alt;
+      break;
+    case 13:
+      modalImg.src = img14.src;
+      captionText.innerHTML = img14.alt;
+      break;
+    case 12:
+      modalImg.src = img13.src;
+      captionText.innerHTML = img13.alt;
+      break;
+    case 11:
+      modalImg.src = img12.src;
+      captionText.innerHTML = img12.alt;
+      break;
+    case 10:
+      modalImg.src = img11.src;
+      captionText.innerHTML = img11.alt;
+      break;
+    case 9:
+      modalImg.src = img10.src;
+      captionText.innerHTML = img10.alt;
+      break;
+    case 8:
+      modalImg.src = img9.src;
+      captionText.innerHTML = img9.alt;
+      break;
+    case 7:
+      modalImg.src = img8.src;
+      captionText.innerHTML = img8.alt;
+      break;
+    case 6:
+      modalImg.src = img7.src;
+      captionText.innerHTML = img7.alt;
+      break;
+    case 5:
+      modalImg.src = img6.src;
+      captionText.innerHTML = img6.alt;
+      break;
+    case 4:
+      modalImg.src = img5.src;
+      captionText.innerHTML = img5.alt;
+      break;
+    case 3:
+      modalImg.src = img4.src;
+      captionText.innerHTML = img4.alt;
+      break;
+    case 2:
+      modalImg.src = img3.src;
+      captionText.innerHTML = img3.alt;
+      break;
+    default:
+      modalImg.src = img2.src;
+      captionText.innerHTML = img2.alt;
+  }
+  if (imgCount == 14) {
+    imgCount = 1;
+  } else {
+    imgCount++;
+  }
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
+}
+
+function prevImg() {
+  switch (imgCount) {
+    case 14:
+      modalImg.src = img13.src;
+      captionText.innerHTML = img13.alt;
+      break;
+    case 13:
+      modalImg.src = img12.src;
+      captionText.innerHTML = img12.alt;
+      break;
+    case 12:
+      modalImg.src = img11.src;
+      captionText.innerHTML = img11.alt;
+      break;
+    case 11:
+      modalImg.src = img10.src;
+      captionText.innerHTML = img10.alt;
+      break;
+    case 10:
+      modalImg.src = img9.src;
+      captionText.innerHTML = img9.alt;
+      break;
+    case 9:
+      modalImg.src = img8.src;
+      captionText.innerHTML = img8.alt;
+      break;
+    case 8:
+      modalImg.src = img7.src;
+      captionText.innerHTML = img7.alt;
+      break;
+    case 7:
+      modalImg.src = img6.src;
+      captionText.innerHTML = img6.alt;
+      break;
+    case 6:
+      modalImg.src = img5.src;
+      captionText.innerHTML = img5.alt;
+      break;
+    case 5:
+      modalImg.src = img4.src;
+      captionText.innerHTML = img4.alt;
+      break;
+    case 4:
+      modalImg.src = img3.src;
+      captionText.innerHTML = img3.alt;
+      break;
+    case 3:
+      modalImg.src = img2.src;
+      captionText.innerHTML = img2.alt;
+      break;
+    case 2:
+      modalImg.src = img1.src;
+      captionText.innerHTML = img1.alt;
+      break;
+    default:
+      modalImg.src = img14.src;
+      captionText.innerHTML = img14.alt;
+  }
+  if (imgCount == 1) {
+    imgCount = 14;
+  } else {
+    imgCount--;
+  }
+  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }

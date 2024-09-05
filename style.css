@@ -200,7 +200,7 @@ body.show {
     padding-top: 150px;
     padding-bottom: 20px;
     text-align: right;
-    max-width: 900px;
+    width: 1200px;
 }
 
 .galleryTitle {
@@ -214,7 +214,7 @@ body.show {
 }
 
 .galleryTxt {
-    color: #000000d9;
+    color: #00000096;
     font-size: 1.5em;
     font-weight: 700;
     margin: 0;
@@ -236,8 +236,8 @@ body.show {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding-inline: 100px;
-  max-width: 1670px;
+  width: 85%;
+  max-width: 1250px;
 }
 
 .galleryImgBox {
@@ -351,6 +351,56 @@ body.show {
     height: 100%;
 }
 
+.middleBox {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.middleBoxMob {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-angle-left {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 500;
+    padding-inline: 20px;
+    padding-block: 30px;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.3s;
+}
+
+.fa-angle-left:hover {
+    background-color: #4f4f4f;
+}
+
+.fa-angle-right {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 500;
+    padding-inline: 20px;
+    padding-block: 30px;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: 0.3s;
+}
+
+.fa-angle-right:hover {
+    background-color: #4f4f4f;
+}
+
 /* Modal Content (image) */
 .modal-content {
     margin: auto;
@@ -363,15 +413,25 @@ body.show {
 
 /* Caption of Modal Image */
 #caption {
-  margin: auto;
+  margin-top: 50px;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  max-width: 80%;
   font-family: "he";
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
   color: #ccc;
   padding: 10px 0;
+}
+
+#imgCounter {
+  position: absolute;
+  top: 25px;
+  left: 35px;
+  z-index: 5;
+  color: #f1f1f1;
+  font-size: 1.88em;
+  font-family: "he";
+  transition: 0.3s;
 }
 
 /* The Close Button */
@@ -393,6 +453,18 @@ body.show {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 1458px){
+  .galleryTxtBox {
+    width: 900px;
+  }
+}
+
+@media only screen and (max-width: 1120px){
+  .gallery-container {
+    width: 96%;
+  }
+}
+
 @media only screen and (max-width: 990px){
   .galleryTxtBox {
     width: 80%;
@@ -400,13 +472,37 @@ body.show {
 
   .galleryTitle {
     font-size: 2.8em;
-    padding-bottom: 15px;
+  }
 }
+
+@media only screen and (max-width: 968px){
+  .galleryTxtBox {
+    width: 600px;
+  }
 }
 
 @media only screen and (max-width: 700px){
   .modal-content {
     top: 50%;
+  }
+
+  .deskArrow {
+    display: none;
+  }
+
+  .middleBoxMob {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 645px){
+  .galleryTxtBox {
+    width: 300px;
+  }
+
+  .galleryTitle {
+    font-size: 2.4em;
+    padding-bottom: 5px;
   }
 }
 
@@ -578,6 +674,7 @@ body.show {
     display: flex;
     flex-direction: row-reverse;
     width: 62%;
+    max-width: 1122px;
     font-family: "titleBold";
     margin-bottom: 25px;
     text-align: right;
@@ -594,6 +691,7 @@ body.show {
 .zoneTitle {
     color: #000000a6;
     font-size: 2em;
+    font-weight: 700;
     margin-bottom: 10px;
     font-family: "he";
 }
@@ -601,6 +699,7 @@ body.show {
 .zoneSubTitle {
     color: #000000d9;
     font-size: 3em;
+    font-weight: 700;
     font-family: "he";
 }
 
@@ -634,19 +733,30 @@ body.show {
     }
 
     .zoneTitle {
-        color: #000000a6;
         font-size: 1.8em;
-        margin-bottom: 10px;
     }
     
     .zoneSubTitle {
-        color: #000000d9;
         font-size: 2.6em;
         margin-bottom: 20px;
     }
 
     .zoneTxtInfo {
         font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .zoneTxtBox {
+        width: 75%;
+    }
+
+    .zoneTitle {
+        font-size: 1.6em;
+    }
+    
+    .zoneSubTitle {
+        font-size: 2.2em;
     }
 }
 
