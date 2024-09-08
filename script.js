@@ -174,26 +174,6 @@ img12.onclick = function(){
   imgCount = 12;
   imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
-img13.onclick = function(){
-  modal.style.display = "flex";
-  setTimeout(function() {
-    modal.classList.add('show');
-  }, 1);
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-  imgCount = 13;
-  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
-}
-img14.onclick = function(){
-  modal.style.display = "flex";
-  setTimeout(function() {
-    modal.classList.add('show');
-  }, 1);
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-  imgCount = 14;
-  imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
-}
 
 // Get the <span> element that closes the modal
 const spanX = document.getElementById("close");
@@ -218,17 +198,9 @@ function closeModal() {
 
 function nextImg() {
   switch (imgCount) {
-    case 14:
+    case 12:
       modalImg.src = img1.src;
       captionText.innerHTML = img1.alt;
-      break;
-    case 13:
-      modalImg.src = img14.src;
-      captionText.innerHTML = img14.alt;
-      break;
-    case 12:
-      modalImg.src = img13.src;
-      captionText.innerHTML = img13.alt;
       break;
     case 11:
       modalImg.src = img12.src;
@@ -273,8 +245,9 @@ function nextImg() {
     default:
       modalImg.src = img2.src;
       captionText.innerHTML = img2.alt;
+      break;
   }
-  if (imgCount == 14) {
+  if (imgCount == document.querySelectorAll(".myImg").length) {
     imgCount = 1;
   } else {
     imgCount++;
@@ -284,14 +257,6 @@ function nextImg() {
 
 function prevImg() {
   switch (imgCount) {
-    case 14:
-      modalImg.src = img13.src;
-      captionText.innerHTML = img13.alt;
-      break;
-    case 13:
-      modalImg.src = img12.src;
-      captionText.innerHTML = img12.alt;
-      break;
     case 12:
       modalImg.src = img11.src;
       captionText.innerHTML = img11.alt;
@@ -337,11 +302,11 @@ function prevImg() {
       captionText.innerHTML = img1.alt;
       break;
     default:
-      modalImg.src = img14.src;
-      captionText.innerHTML = img14.alt;
+      modalImg.src = img12.src;
+      captionText.innerHTML = img12.alt;
   }
   if (imgCount == 1) {
-    imgCount = 14;
+    imgCount = document.querySelectorAll(".myImg").length;
   } else {
     imgCount--;
   }
