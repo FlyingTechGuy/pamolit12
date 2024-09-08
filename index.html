@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+	<link rel="stylesheet" href="style.css">
+	<!-- <link rel="shortcut icon" type="image/png" href="src/GSIconBonW.png"> -->
+    <script src="https://kit.fontawesome.com/ceab6117ab.js" crossorigin="anonymous"></script>
+	<title>Shoham - Pamolit 12</title>
+</head>
+<body>
+    <section class="topSec">
+        <video src="src/pamolit12.mov" class="topVidBg" autoplay muted loop></video>
+        <div class="blackopacity"></div>
+        <div class="titleBox">
+            <p class="topTitle">פמולית 12 - שוהם</p>
+            <p class="topSubTitle">דירת גן 4 חדרים</p>
+        </div>
+    </section>
+    <section class="gallerySec">
+        <div class="galleryTxtBox">
+            <p class="galleryTitle">פרטים על הדירה</p>
+            <p class="galleryTxt">דירת גן 4 חדרים קומת קרקע. לדירה 3 חדרי שירותים - שירותי אורחים, שירותים ראשיים הכוללים גם אמבטיה ושרותי הורים הנמצאים בסמוך ליחידת ההורים וכוללים גם מקלחון. בכל חדר יש מזגן ובנוסף יש בסלון ובמטבח מזגן מיני מרכזי עם אפשרות שליטה בכל מזגן בצורה נפרדת. הרוב המוחלט של הגינה מכוסה בדשא סינטטי והיציאה לגינה מרוצפת. לדירה מצורפות שתי חניות צמודות אשר ממוקמות בסמוך לבניין ברחוב. הדירה פינתית כך שיש פרטיות מלאה.<span style="opacity: 0;">ד</span></p>
+        </div>
+        <div class="galleryBox">
+            <div class="invisTag" id="photos"></div>
+            <div class="gallery-container">
+                <div class="galleryImgBox"><img class="myImg" id="myImg1" src="src/pm12_1.JPG" alt="יציאה לגינה" style="width:100%;max-width:300px"></div>
+                <div class="galleryImgBox"><img class="myImg" id="myImg2" src="src/pm12_2.JPG" alt="גינה" style="width:100%;max-width:300px"></div>
+                <div class="galleryImgBox"><img class="myImg" id="myImg3" src="src/pm12_3.JPG" alt="גינה (מזגנים)" style="width:100%;max-width:300px"></div>
+                <div class="galleryImgBox"><img class="myImg" id="myImg4" src="src/pm12_4.JPG" alt="סלון" style="width:100%;max-width:300px"></div>
+                <div class="galleryImgBox"><img class="myImg" id="myImg5" src="src/pm12_5.JPG" alt="מטבח" style="width:100%;max-width:300px"></div>
+                <div class="galleryImgBox"><img class="myImg" id="myImg6" src="src/pm12_6.JPG" alt="שירותי אורחים" style="width:100%;max-width:300px"></div>
+                <div class="galleryImgBox"><img class="myImg" id="myImg7" src="src/pm12_7.JPG" alt="חדר 1" style="width:100%;max-width:300px"></div>
+                <div class="galleryImgBox"><img class="myImg" id="myImg8" src="src/pm12_8.JPG" alt="חדר 2 (ממ״ד)" style="width:100%;max-width:300px"></div>
+                <div class="galleryImgBox"><img class="myImg" id="myImg9" src="src/pm12_9.JPG" alt="חדר 3 (יחידת הורים)" style="width:100%;max-width:300px"></div>
+                <div class="galleryImgBox"><img class="myImg" id="myImg10" src="src/pm12_10.JPG" alt="שירותי הורים" style="width:100%;max-width:300px"></div>
+                <div class="galleryImgBox"><img class="myImg" id="myImg11" src="src/pm12_11.JPG" alt="שירותים ואמבטייה ראשיים" style="width:100%;max-width:300px"></div>
+                <div class="galleryImgBox"><img class="myImg" id="myImg12" src="src/pm12_12.JPG" alt="חדר שירות" style="width:100%;max-width:300px"></div>
+            </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close" id="close">&times;</span>
+                <span id="imgCounter"></span>
+                <div class="middleBox">
+                    <span onclick="prevImg()" class="deskArrow"><i class="fa-solid fa-angle-left"></i></span>
+                    <img class="modal-content" id="img01">
+                    <span onclick="nextImg()" class="deskArrow"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div class="middleBoxMob">
+                    <i onclick="prevImg()" class="fa-solid fa-angle-left"></i>
+                    <i onclick="nextImg()" class="fa-solid fa-angle-right"></i>
+                </div>
+                <div id="caption"></div>
+                <div class="modalBg" onclick="closeModal()"></div>
+            </div>
+        </div>
+    </section>
+    <section class="aboutSec">
+        <div class="aboutTextBox">
+            <p class="aboutTitle">קצת על הבניין</p>
+            <p class="aboutTxt">בניין בוטיק פינתי בן 3 קומות - קומה ראשונה 4 דירות גן, קומה שנייה 2 דירות מיני פנטהאוז וקומה שלישית 2 דירות פנטהאוז. לבניין יש חנייה תת קרקעית ובנוסף חנייה ברחוב כאשר הכניסה לרחוב עם רכב ניתנת אך ורק למי שגר בו. הבניין הוא בניין שקט והדיירים בו איכותיים ונחמדים. הכניסה לבניין ניתנת על ידי הקשת קוד או לחלופין צלצול באינטרקום לאחת מן הדירות בבניין. מפנים הבניין הדלת נפתחת בצורה אוטומטית כאשר אדם מתקרב אליה דבר המקל במצבים בהם לא ניתן לפתוח אותה בצורה ידנית.<span style="opacity: 0;">ד</span></p>
+        </div>
+        <div class="slideshow-container">
+            <div class="imgs-container">
+                <div class="mySlides fade" id="mySlide1">
+                    <img src="src/img1.JPG" style="width:100%">
+                </div>
+                <div class="mySlides fade" id="mySlide2">
+                    <img src="src/img2.JPG" style="width:100%">
+                </div>
+            </div>
+            <div class="dots-container">
+                <span class="dot" id="dot2" onclick="showSlides(2)"></span>
+                <span class="dot" id="dot1" onclick="showSlides(1)"></span>
+            </div>
+        </div>        
+    </section>
+    <section class="zoneSec">
+        <div class="zoneTxtBox">
+            <div class="zoneTxtRow">
+                <p class="zoneTitle">שוהם</p>
+                <p class="zoneSubTitle">שכונת הדרים</p>
+            </div>
+            <p class="zoneTxtInfo">שכונה קהילתית, בטוחה מאוד לילדים, בה ניתן להגיע ממקום למקום, ללא צורך בחציית כבישים ראשיים. השכונה טובלת בשטחים ירוקים, ומחוברת ליישוב ברשת של שבילים וגשרים להולכים ולרוכבים. בלב השכונה פארק נחל ובמרכזו אגם אקולוגי.<span style="opacity: 0;">מ</span><br></p>
+        </div>
+        <div class="zoneImgCont">
+            <img src="src/pano180.JPG" alt="pano" class="zoneImg">
+        </div>
+    </section>
+    <section class="panoSec">
+        <p class="panoTitle">האיזור ממעוף הציפור</p>
+        <div class="panoIframeBox">
+            <iframe allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" src="https://panoraven.com/en/embed/ATfJuKIrJ1"></iframe>
+        </div>
+    </section>
+    <footer>האתר נבנה ע״י <span class="footerBold">גיא שמש</span> פיתוח אתרים</footer>
+    <script src="script.js"></script>
+</body>
+</html>
