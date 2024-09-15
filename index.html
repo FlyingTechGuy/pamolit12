@@ -11,7 +11,7 @@
 </head>
 <body>
     <section class="topSec">
-        <video src="src/pamolit12.mp4" class="topVidBg" autoplay muted loop></video>
+        <video src="src/pamolit12.mov" class="topVidBg" autoplay muted loop></video>
         <div class="blackopacity"></div>
         <div class="titleBox">
             <p class="topTitle">פמולית 12 - שוהם</p>
@@ -91,11 +91,19 @@
     </section>
     <section class="panoSec">
         <p class="panoTitle">האיזור ממעוף הציפור</p>
-        <div class="panoIframeBox">
-            <iframe allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" src="https://panoraven.com/en/embed/ATfJuKIrJ1"></iframe>
+        <div class="panoImgBox">
+            <div class="panoImg"></div>
+            <!-- <iframe allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" src="https://panoraven.com/en/embed/ATfJuKIrJ1"></iframe> -->
         </div>
     </section>
     <footer>האתר נבנה ע״י <span class="footerBold">גיא שמש</span> פיתוח אתרים</footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js"
+      integrity="sha512-uWKImujbh9CwNa8Eey5s8vlHDB4o1HhrVszkympkm5ciYTnUEQv3t4QHU02CUqPtdKTg62FsHo12x63q6u0wmg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="panolens.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

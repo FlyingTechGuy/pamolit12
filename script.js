@@ -312,3 +312,17 @@ function prevImg() {
   }
   imgCounter.innerHTML = imgCount + " / " + document.querySelectorAll(".myImg").length;
 }
+
+// ------------------------------------
+
+const panoImg = document.querySelector(".panoImg");
+const panoSrc = 'src/pano360.JPG';
+
+const panorama = new PANOLENS.ImagePanorama(panoSrc);
+const viewer = new PANOLENS.Viewer({
+  container: panoImg,
+  autoRotate: true,
+  autoRotateSpeed: 0.1
+});
+
+viewer.add(panorama);
