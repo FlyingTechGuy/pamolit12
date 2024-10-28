@@ -498,11 +498,16 @@ body.show {
 @media only screen and (max-width: 645px){
   .galleryTxtBox {
     width: 300px;
+    padding-top: 120px;
   }
 
   .galleryTitle {
     font-size: 2.4em;
     padding-bottom: 5px;
+  }
+
+  .galleryBox {
+    padding-bottom: 50px;
   }
 }
 
@@ -532,7 +537,7 @@ body.show {
     margin: 0;
     transition: 1.2s ease-in-out;
     font-family: "he";
-    margin-top: -30px;
+    margin-top: -20px;
     margin-bottom: 15px;
 }
 
@@ -617,10 +622,13 @@ body.show {
     .aboutSec {
         flex-direction: column;
         gap: 0px;
+        padding-bottom: 80px;
+        padding-top: 80px;
     }
 
     .aboutTitle {
         font-size: 3em;
+        margin-top: 0;
     }
     
     .imgs-container {
@@ -761,6 +769,12 @@ body.show {
     }
 }
 
+@media screen and (max-width: 680px) {
+    .zoneSec {
+        padding-top: 100px;
+    }
+}
+
 .panoSec {
     background-color: #fff;
     position: relative;
@@ -814,10 +828,20 @@ body.show {
     margin-bottom: 40px;
 }
 
+.mapTitle {
+    color: #000000d9;
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0;
+    transition: 1.2s ease-in-out;
+    font-family: "he";
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
 .map {
     position: relative;
     border-radius: 10px;
-    margin-top: 40px;
     width: 80%;
     height: 750px;
 }
@@ -825,6 +849,12 @@ body.show {
 @media screen and (max-width: 800px) {
     .panoTitle {
         font-size: 2.8em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .panoTitle {
+        font-size: 2.2em;
     }
 }
 
