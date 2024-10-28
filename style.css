@@ -54,7 +54,7 @@ body.show {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 100dvh;
+    height: 100svh;
     transition: 0.8s;
     padding-bottom: 50px;
 }
