@@ -17,21 +17,41 @@ showSlides(1);
 function showSlides(n) {
     let slide1 = document.getElementById("mySlide1");
     let slide2 = document.getElementById("mySlide2");
+    let slide3 = document.getElementById("mySlide3");
     let dot1 = document.getElementById("dot1");
     let dot2 = document.getElementById("dot2");
+    let dot3 = document.getElementById("dot3");
 
     if (n == 1) {
         slide1.classList.add("active");
         slide2.classList.remove("active");
+        slide3.classList.remove("active");
         dot1.classList.add("active");
         dot2.classList.remove("active");
-    } else {
+        dot3.classList.remove("active");
+    } else if (n == 2) {
         slide1.classList.remove("active");
         slide2.classList.add("active");
+        slide3.classList.remove("active");
         dot1.classList.remove("active");
         dot2.classList.add("active");
+        dot3.classList.remove("active");
+    } else {
+        slide1.classList.remove("active");
+        slide2.classList.remove("active");
+        slide3.classList.add("active");
+        dot1.classList.remove("active");
+        dot2.classList.remove("active");
+        dot3.classList.add("active");
     }
 }
+
+buildInd = 2;
+setInterval(function(){
+  showSlides(buildInd);
+  buildInd++
+  if (buildInd > 3) { buildInd = 1 }
+}, 5000);
 
 // Get the modal
 const modal = document.getElementById("myModal");
@@ -322,7 +342,13 @@ const panorama = new PANOLENS.ImagePanorama(panoSrc);
 const viewer = new PANOLENS.Viewer({
   container: panoImg,
   autoRotate: true,
-  autoRotateSpeed: 0.1
+  autoRotateSpeed: 0.1,
+  autoHideInfospot: false,
+  clickTolerance: 100,
+  cameraFov: 80,
+  viewIndicator: false,
+  indicatorSize: 50,
+  output: 'console'
 });
 
 viewer.add(panorama);
